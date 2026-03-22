@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>タイトル未定</title>
+
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  background: black;
+}
+
+/* 全体 */
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* 画像共通 */
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
+/* 背景 */
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* キャラ */
+.chara {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* 前景 */
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* テキスト */
+.textbox {
+  position: absolute;
+  bottom: 70px;
+  width: 100%;
+  padding: 16px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  text-shadow: 0 0 5px black;
+  box-sizing: border-box;
+}
+
+/* UI */
+.ui {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: rgba(0,0,0,0.3);
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  color: white;
+  background: transparent;
+  border: none;
+}
+
+/* タイトル画面 */
+#titleScreen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.titleText {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+
+.startBtn {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- タイトル画面 -->
+<div id="titleScreen">
+  <img src="images/title.jpg" class="bg">
+  <div class="titleText">タイトル未定</div>
+  <div class="startBtn">
+    <button onclick="startGame()">スタート</button>
+  </div>
+</div>
+
+<!-- ゲーム画面 -->
+<div id="gameScreen" class="scene" style="display:none;">
+
+  <img id="bg" class="bg">
+  <img id="chara" class="chara">
+  <img id="front" class="front">
+
+  <div class="textbox" id="text"></div>
+
+  <div class="ui">
+    <button onclick="next()">▶ 次へ</button>
+    <button>スキップ</button>
+    <button>オート</button>
+    <button>ログ</button>
+  </div>
+
+</div>
+
+<script>
+
+let step = 0;
+
+function startGame() {
+  document.getElementById("titleScreen").style.display = "none";
+  document.getElementById("gameScreen").style.display = "block";
+  next();
+}
+
+function next() {
+
+  const bg = document.getElementById("bg");
+  const chara = document.getElementById("chara");
+  const front = document.getElementById("front");
+  const text = document.getElementById("text");
+
+  switch(step) {
+
+    case 0:
+      bg.src = "";
+      chara.style.display = "none";
+      front.style.display = "none";
+      text.innerText = "チュン チュン";
+      break;
+
+    case 1:
+      bg.src = "images/bg_myroom_a.jpg";
+      text.innerText = "もう朝かよ……";
+      break;
+
+    case 2:
+      text.innerText = "って、まだ早いなぁ。寝るか";
+      break;
+
+    case 3:
+      bg.src = "";
+      text.innerText = "…………";
+      break;
+
+    case 4:
+      text.innerText = "いつまで寝てるのよ！！";
+      break;
+
+    case 5:
+      bg.src = "images/bg_myroom_a.jpg";
+      chara.src = "images/chara_sister_a.png";
+      chara.style.display = "block";
+      front.src = "images/bg_myroom_b.png";
+      front.style.display = "block";
+      text.innerText = "先に行くから、起きなさいよ！！";
+      break;
+
+    case 6:
+      chara.style.display = "none";
+      front.style.display = "none";
+      text.innerText = "……行ったか";
+      break;
+
+    default:
+      text.innerText = "（ここで次のシーンへ）";
+      break;
+  }
+
+  step++;
+}
+
+/* 画面タップでも進む */
+document.addEventListener("click", function(e) {
+  if (e.target.tagName !== "BUTTON") {
+    next();
+  }
+});
+
+</script>
+
+</body>
+</html>
