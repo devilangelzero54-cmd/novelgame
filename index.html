@@ -30,7 +30,7 @@ img {
   position: absolute;
   width: 100%;
   height: auto;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
 }
 
@@ -163,7 +163,7 @@ function next() {
   switch(step) {
 
     case 0:
-      bg.src = "";
+      bg.src = "none";
       chara.style.display = "none";
       front.style.display = "none";
       text.innerText = "チュン チュン";
@@ -179,7 +179,7 @@ function next() {
       break;
 
     case 3:
-      bg.src = "";
+      bg.src = "none";
       text.innerText = "…………";
       break;
 
@@ -203,7 +203,7 @@ function next() {
       break;
 
     default:
-      text.innerText = "（ここで次のシーンへ）";
+      text.innerText = "𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧…";
       break;
   }
 
