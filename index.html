@@ -30,7 +30,7 @@ img {
   position: absolute;
   width: 100%;
   height: auto;
-  top: 40%;
+  top: 50%;
   transform: translateY(-50%);
 }
 
@@ -97,7 +97,7 @@ button {
 
 .titleText {
   position: absolute;
-  top: 30%;
+  top: 25%;
   width: 100%;
   text-align: center;
   font-size: 32px;
@@ -163,7 +163,7 @@ function next() {
   switch(step) {
 
     case 0:
-      bg.src = "none";
+      bg.style.display = "none";
       chara.style.display = "none";
       front.style.display = "none";
       text.innerText = "チュン チュン";
@@ -179,7 +179,7 @@ function next() {
       break;
 
     case 3:
-      bg.src = "none";
+      bg.style.display = "none";
       text.innerText = "…………";
       break;
 
