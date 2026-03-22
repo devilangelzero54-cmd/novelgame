@@ -25,6 +25,14 @@ img {
   user-select: none;
   pointer-events: none;
 }
+/* タイトル */
+ .titleImg {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 /* 背景 */
 .bg {
@@ -110,8 +118,8 @@ button {
 
 <!-- タイトル画面 -->
 <div id="titleScreen">
-  <img src="images/title.jpg" class="bg">
   <div class="titleText">タイトル未定</div>
+  <img src="images/title.jpg" class="titleImg">
   <div class="startBtn">
     <button onclick="startGame()">スタート</button>
   </div>
