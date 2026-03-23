@@ -69,6 +69,10 @@ img {
   box-sizing: border-box;
 }
 
+/* キャラのセリフ */
+.charaTalk {
+  color: white;
+}
 /* 主人公のセリフ */
 .main {
   color: #d0e6ff;
@@ -226,41 +230,41 @@ function next() {
 
     case 3:
       bg.style.display = "none";
-      text.innerText = "…";
+      setText("…", "main");
       break;
 
     case 4:
       bg.style.display = "none";
-      text.innerText = "……";
+      setText("……", "main");
       break;
     
     case 5:
       bg.style.display = "none";
-      text.innerText = "………";
+      setText("………", "main");
       break;
     
     case 6:
       bg.style.display = "none";
-      text.innerText = "…………";
+      setText("…………", "main");
       break;
     
     case 7:
       bg.style.display = "none";
-      text.innerText = "まだ、寝てるよ…";
+      setText("まだ、寝てるよ…", "chara");
       break;
     
     case 8:
       bg.style.display = "none";
-      text.innerText = "いい加減、起きなよ。";
+      setText("いい加減、起きなよ。", "chara");
       break;
     
     case 9:
       bg.style.display = "none";
-      text.innerText = "……";
+      setText("……", "main");
       break;
     
     case 10:
-      text.innerText = "起きろっ！！";
+      setText("起きろっ！！", "chara");
       break;
 
     case 11:
@@ -270,38 +274,38 @@ function next() {
       chara.style.display = "block";
       front.src = "images/bg_myroom_b.png";
       front.style.display = "block";
-      text.innerText = "先に行くから、起きなさいよ！！";
+      setText("先に行くから、起きなさいよ！！", "chara");
       break;
 
     case 12:
       chara.style.display = "none";
       front.style.display = "none";
-      text.innerText = "……行ったか";
+      setText("……行ったか", "thought");
       break;
 
     case 13:
       bg.style.display = "block";
       bg.src = "images/bg_living.jpg";
-      text.innerText = "ふぁ～……";
+      setText("ふぁ～～……", "main");
       break;
 
     case 14:
       chara.style.display = "block";
       chara.src = "images/chara_sister_surprise.png";
-      text.innerText = "あれ？今日は早いね？";
+      setText("あれ？今日は早いね？", "chara");
       break;
 
     case 15:
-      text.innerText = "目が覚めたからな……";
+      setText("目が覚めたからな……", "main");
       break;
 
     case 16:
       chara.src = "images/chara_sister_grin.png";
-      text.innerText = "ふぅ～ん♪";
+      setText("ふぅ～ん♪", "chara");
       break;
 
     case 17:
-      text.innerText = "なんだよ、その顔は";
+      setText("なんだよ、その顔は", "main");
       break;default:
       text.innerText = "𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧…";
       break;
@@ -317,6 +321,7 @@ function setText(content, type) {
 
   text.className = "textbox"; // ←ここも修正（重要）
 
+  if (type === "chara") text.classList.add("charaTalk");
   if (type === "main") text.classList.add("main");
   if (type === "narration") text.classList.add("narration");
   if (type === "thought") text.classList.add("thought");
