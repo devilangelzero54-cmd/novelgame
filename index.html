@@ -69,7 +69,23 @@ img {
   box-sizing: border-box;
 }
 
-/* UI */
+/* 主人公のセリフ */
+.main {
+  color: #d0e6ff;
+}
+
+/* 地の文 */
+.narration {
+  color: #cccccc;
+}
+
+/* 心の声 */
+.thought {
+  color: #aaaaaa;
+  font-style: italic;
+}
+  
+  /* UI */
 .ui {
   position: absolute;
   bottom: 0;
@@ -156,6 +172,8 @@ button {
 
   <div class="textbox" id="text"></div>
 
+  <div id="text" class="thought">
+    
   <div id="choices" style="display:none;">
   <button onclick="choose('wake')">起きる</button>
   <button onclick="choose('sleep')">2度寝</button>
@@ -199,7 +217,7 @@ function next() {
     case 1:
       bg.style.display = "block";
       bg.src = "images/bg_myroom_a.jpg";
-      text.innerText = "もう朝かよ……";
+      setText("もう朝かよ……", "thought");
       break;
 
     case 2:
@@ -292,6 +310,16 @@ function next() {
   step++;
 }
 
+function setText(content, type) {
+  text.innerText = content;
+
+  text.className = ""; // リセット
+
+  if (type === "main") text.classList.add("main");
+  if (type === "narration") text.classList.add("narration");
+  if (type === "thought") text.classList.add("thought");
+}
+  
 function showChoices() {
   document.getElementById("choices").style.display = "block";
 }
