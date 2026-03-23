@@ -311,9 +311,11 @@ function next() {
 }
 
 function setText(content, type) {
+  const text = document.getElementById("text"); // ←追加
+
   text.innerText = content;
 
-  text.className = ""; // リセット
+  text.className = "textbox"; // ←ここも修正（重要）
 
   if (type === "main") text.classList.add("main");
   if (type === "narration") text.classList.add("narration");
