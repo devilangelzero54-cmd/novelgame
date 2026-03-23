@@ -261,7 +261,30 @@ function next() {
       text.innerText = "……行ったか";
       break;
 
-    default:
+    case 13:
+      bg.style.display = "block";
+      bg.src = "images/bg_living.jpg";
+      text.innerText = "ふぁ～……";
+      break;
+
+    case 14:
+      chara.style.display = "block";
+      chara.src = "images/chara_sister_surprise.png";
+      text.innerText = "あれ？今日は早いね？";
+      break;
+
+    case 15:
+      text.innerText = "目が覚めたからな……";
+      break;
+
+    case 16:
+      chara.src = "images/chara_sister_grin.png";
+      text.innerText = "ふぅ～ん♪";
+      break;
+
+    case 17:
+      text.innerText = "なんだよ、その顔は";
+      break;default:
       text.innerText = "𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧…";
       break;
   }
