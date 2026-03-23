@@ -272,21 +272,27 @@ function next() {
 function showChoices() {
   document.getElementById("choices").style.display = "block";
 }
-function choose(type) {
 
+function choose(type) {
   document.getElementById("choices").style.display = "none";
 
   if (type === "wake") {
-    step = 13;  // リビング
+    step = 13;
   } else {
-    step = 3;   // 既存ルート
+    step = 3;
   }
 
   next();
 }
   
   /* 画面タップでも進む */
-document.addEventListener("click", function(e) {
+  document.addEventListener("click", function(e) {
+  const choices = document.getElementById("choices");
+
+  if (choices.style.display === "block") {
+    return;
+  }
+
   if (e.target.tagName !== "BUTTON") {
     next();
   }
