@@ -284,27 +284,47 @@ function next() {
       break;
 
     case 13:
+      bg.style.display = "none";
+      setText("………", "main");
+      break;
+    
+    case 14:
+      bg.style.display = "none";
+      setText("やべぇ！", "main");
+      break;
+    
+    case 15:
+      bg.style.display = "none";
+      setText("遅刻だっ！", "main");
+      break;
+    
+    case 16:
+      bg.style.display = "none";
+      setText("𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧…", "main");
+      break;
+    
+    case 51:
       bg.style.display = "block";
       bg.src = "images/bg_living.jpg";
       setText("ふぁ～～……", "main");
       break;
 
-    case 14:
+    case 52:
       chara.style.display = "block";
       chara.src = "images/chara_sister_surprise.png";
       setText("あれ？今日は早いね？", "chara");
       break;
 
-    case 15:
+    case 53:
       setText("目が覚めたからな……", "main");
       break;
 
-    case 16:
+    case 54:
       chara.src = "images/chara_sister_grin.png";
       setText("ふぅ～ん♪", "chara");
       break;
 
-    case 17:
+    case 55:
       setText("なんだよ、その顔は", "main");
       break;default:
       text.innerText = "𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧…";
@@ -335,7 +355,7 @@ function choose(type) {
   document.getElementById("choices").style.display = "none";
 
   if (type === "wake") {
-    step = 13;
+    step = 51;
   } else {
     step = 3;
   }
