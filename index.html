@@ -215,7 +215,7 @@ function next() {
       bg.style.display = "none";
       chara.style.display = "none";
       front.style.display = "none";
-      text.innerText = "チュン チュン";
+      setText("チュン チュン", "narration");
       break;
 
     case 1:
@@ -225,7 +225,7 @@ function next() {
     
     case 2:
       bg.style.display = "none";
-      setText("チュン チュン", "chara");
+      setText("チュン チュン", "narration");
       break;
     
     case 3:
@@ -246,7 +246,7 @@ function next() {
     case 6:
       bg.style.display = "block";
       bg.src = "images/bg_myroom_a.jpg";
-      setText("まだ余裕だな…", "main");
+      setText("まだ余裕だな…", "thought");
       break;
     
     case 7:
@@ -271,55 +271,104 @@ function next() {
     
     case 11:
       bg.style.display = "none";
-      setText("まだ、寝てるよ…", "chara");
+      setText("コン コン", "narration");
       break;
     
     case 12:
       bg.style.display = "none";
-      setText("いい加減、起きなよ。", "chara");
+      setText("………", "main");
       break;
     
     case 13:
       bg.style.display = "none";
-      setText("……", "main");
+      setText("ガチャ", "narration");
       break;
     
     case 14:
+      bg.style.display = "none";
+      setText("まだ、寝てるよ…", "chara");
+      break;
+    
+    case 15:
+      bg.style.display = "none";
+      setText("はぁ……", "chara");
+      break;
+    
+    case 16:
+      bg.style.display = "none";
+      setText("そろそろ、起きなよ。", "chara");
+      break;
+    
+    case 17:
+      bg.style.display = "none";
+      setText("……", "main");
+      break;
+    
+    case 18:
+      setText("いい加減に…", "chara");
+      break;
+    
+    case 19:
       setText("起きろっ！！", "chara");
       break;
 
-    case 15:
+    case 20:
       bg.style.display = "block";
       bg.src = "images/bg_myroom_a.jpg";
       chara.src = "images/chara_sister_a.png";
       chara.style.display = "block";
       front.src = "images/bg_myroom_b.png";
       front.style.display = "block";
-      setText("先に行くから、起きなさいよ！！", "chara");
+      setText("う～～ん もう少しだけ……", "main");
       break;
 
-    case 16:
+    case 21:
+      setText("もう、何時だと思ってるの？", "chara");
+      break;
+    
+    case 22:
+      setText("いま 何時…？", "main");
+      break;
+    
+    case 23:
+      setText("ご飯食べる時間無くなるよ！", "chara");
+      break;
+    
+    case 24:
+      setText("わたし、先に行くからね。", "chara");
+      break;
+    
+    case 25:
+      setText("遅刻しないでよね", "chara");
+      break;
+    
+    case 26:
+      setText("わかったよ…", "main");
+      break;
+    
+    case 27:
       chara.style.display = "none";
       front.style.display = "none";
+      setText("いってきま～す", "chara");
       setText("……行ったか", "thought");
       break;
 
-    case 17:
+    case 28:
       bg.src = "images/bg_myroom_a.jpg";
       setText("………", "main");
       break;
     
-    case 18:
+    case 29:
       bg.src = "images/bg_myroom_a.jpg";
       setText("やべぇ！", "main");
       break;
     
-    case 19:
+    case 30:
       bg.src = "images/bg_myroom_a.jpg";
       setText("遅刻だっ！", "main");
       break;
     
-    case 20:
+    case 31:
       bg.src = "images/bg_myroom_a.jpg";
       setText("𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧…", "main");
       break;
