@@ -219,55 +219,76 @@ function next() {
       break;
 
     case 1:
+      bg.style.display = "none";
+      setText("んっ…", "main");
+      break;
+    
+    case 2:
+      bg.style.display = "none";
+      setText("チュン チュン", "chara");
+      break;
+    
+    case 3:
+      bg.style.display = "none";
+      setText("う～ん…", "main");
+      break;
+    
+    case 4:
       bg.style.display = "block";
       bg.src = "images/bg_myroom_a.jpg";
       setText("もう朝かよ……", "thought");
       break;
 
-    case 2:
+    case 5:
       showChoices();
       break;
 
-    case 3:
-      bg.style.display = "none";
-      setText("…", "main");
-      break;
-
-    case 4:
-      bg.style.display = "none";
-      setText("……", "main");
-      break;
-    
-    case 5:
-      bg.style.display = "none";
-      setText("………", "main");
-      break;
-    
     case 6:
-      bg.style.display = "none";
-      setText("…………", "main");
+      bg.style.display = "block";
+      bg.src = "images/bg_myroom_a.jpg";
+      setText("まだ余裕だな…", "main");
       break;
     
     case 7:
       bg.style.display = "none";
-      setText("まだ、寝てるよ…", "chara");
+      setText("…", "main");
       break;
-    
+
     case 8:
-      bg.style.display = "none";
-      setText("いい加減、起きなよ。", "chara");
-      break;
-    
-    case 9:
       bg.style.display = "none";
       setText("……", "main");
       break;
     
+    case 9:
+      bg.style.display = "none";
+      setText("………", "main");
+      break;
+    
     case 10:
+      bg.style.display = "none";
+      setText("…………", "main");
+      break;
+    
+    case 11:
+      bg.style.display = "none";
+      setText("まだ、寝てるよ…", "chara");
+      break;
+    
+    case 12:
+      bg.style.display = "none";
+      setText("いい加減、起きなよ。", "chara");
+      break;
+    
+    case 13:
+      bg.style.display = "none";
+      setText("……", "main");
+      break;
+    
+    case 14:
       setText("起きろっ！！", "chara");
       break;
 
-    case 11:
+    case 15:
       bg.style.display = "block";
       bg.src = "images/bg_myroom_a.jpg";
       chara.src = "images/chara_sister_a.png";
@@ -277,28 +298,28 @@ function next() {
       setText("先に行くから、起きなさいよ！！", "chara");
       break;
 
-    case 12:
+    case 16:
       chara.style.display = "none";
       front.style.display = "none";
       setText("……行ったか", "thought");
       break;
 
-    case 13:
+    case 17:
       bg.src = "images/bg_myroom_a.jpg";
       setText("………", "main");
       break;
     
-    case 14:
+    case 18:
       bg.src = "images/bg_myroom_a.jpg";
       setText("やべぇ！", "main");
       break;
     
-    case 15:
+    case 19:
       bg.src = "images/bg_myroom_a.jpg";
       setText("遅刻だっ！", "main");
       break;
     
-    case 16:
+    case 20:
       bg.src = "images/bg_myroom_a.jpg";
       setText("𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧…", "main");
       break;
@@ -357,7 +378,7 @@ function choose(type) {
   if (type === "wake") {
     step = 51;
   } else {
-    step = 3;
+    step = 6;
   }
 
   next();
