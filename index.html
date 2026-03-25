@@ -390,22 +390,48 @@ function next() {
       break;
 
     case 52:
+      bg.style.display = "block";
+      bg.src = "images/bg_living.jpg";
+      setText("おはよ……", "main");
+      break;
+    
+    case 53:
       chara.style.display = "block";
       chara.src = "images/chara_sister_surprise.png";
-      setText("あれ？今日は早いね？", "chara");
-      break;
-
-    case 53:
-      setText("目が覚めたからな……", "main");
+      setText("おはよう。", "chara");
       break;
 
     case 54:
+      bg.style.display = "block";
+      bg.src = "images/bg_living.jpg";
+      setText("珍しく、今日は早起きだねw", "chara");
+      break;
+    
+    case 55:
+      setText("あぁ…目が覚めちゃったよ。", "main");
+      break;
+
+    case 56:
       chara.src = "images/chara_sister_grin.png";
       setText("ふぅ～ん♪", "chara");
       break;
 
-    case 55:
-      setText("なんだよ、その顔は", "main");
+    case 57:
+      bg.style.display = "block";
+      bg.src = "images/bg_living.jpg";
+      setText("何か、いい事でもあるのかな？ニヤニヤ", "chara");
+      break;
+    
+    case 58:
+      setText("ナニモナイヨ…", "main");
+      break;
+    
+    case 59:
+      setText("なんで？カタコトwww", "chara");
+      break;
+    
+    case 60:
+      setText("ニヤニヤしない。", "main");
       break;default:
       text.innerText = "𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧…";
       break;
