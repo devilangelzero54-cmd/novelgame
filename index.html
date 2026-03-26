@@ -390,8 +390,6 @@ function next() {
       break;
 
     case 52:
-      bg.style.display = "block";
-      bg.src = "images/bg_living.jpg";
       setText("おはよ……", "main");
       break;
     
@@ -403,8 +401,8 @@ function next() {
 
     case 54:
       bg.style.display = "block";
-      bg.src = "images/bg_living.jpg";
-      setText("珍しく、今日は早起きだねw", "chara");
+      chara.src = "images/chara_sister_laugh.png";
+      setText("…珍しく、今日は早起きだねw", "chara");
       break;
     
     case 55:
@@ -417,9 +415,7 @@ function next() {
       break;
 
     case 57:
-      bg.style.display = "block";
-      bg.src = "images/bg_living.jpg";
-      setText("何か、いい事でもあるのかな？ニヤニヤ", "chara");
+      setText("…何か、いい事でもあるのかな？", "chara");
       break;
     
     case 58:
@@ -427,12 +423,55 @@ function next() {
       break;
     
     case 59:
-      setText("なんで？カタコトwww", "chara");
+      setText("…なんで？カタコトwww", "chara");
       break;
     
     case 60:
-      setText("ニヤニヤしない。", "main");
-      break;default:
+      setText("ニヤニヤすんな…", "main");
+      break;
+    
+    case 61:
+      chara.src = "images/chara_sister_laugh.png";
+      setText("してないよぉ～www", "chara");
+      break;
+    
+    case 62:
+      setText("くっ…もういい…", "main");
+      break;
+    
+    case 63:
+      setText("学校いってくる", "main");
+      break;
+    
+    case 64:
+      chara.src = "images/chara_sister_anger.png";
+      setText("あっ！こら、待ちなさい！", "chara");
+      break;
+    
+    case 65:
+      setText("………", "chara");
+      break;
+    
+    case 66:
+      setText("…久しぶりに", "chara");
+      break;
+    
+    case 67:
+      setText("一緒にいけると思ったのに", "chara");
+      break;
+    
+    case 68:
+      bg.style.display = "block";
+      bg.src = "images/bg_road_home.jpg";
+      setText("やれやれ…", "thought");
+      break;
+    
+    case 69:
+      setText("しかし、早すぎたか？", "thought");
+      break;
+    
+    case 70:
+      break:default:
       text.innerText = "𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧…";
       break;
   }
