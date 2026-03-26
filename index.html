@@ -139,8 +139,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 36px;
+  gap: 24px;
   z-index: 10;
 }
 
@@ -153,6 +152,10 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   backdrop-filter: blur(5px);
+}
+
+#choices button:active {
+  transform: scale(0.97);
 }
   
 </style>
@@ -497,7 +500,8 @@ function setText(content, type) {
 }
   
 function showChoices() {
-  document.getElementById("choices").style.display = "block";
+  const choices = document.getElementById("choices");
+  choices.style.display = "flex";
 }
 
 function choose(type) {
