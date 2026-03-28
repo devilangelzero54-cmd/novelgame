@@ -406,7 +406,14 @@ function next() {
       break;
     
     case 37:
+      chara.style.display = "none";
+      front.style.display = "none";
+      bg.style.display = "block";
       bg.src = "images/bg_road_home.jpg";
+      setText("……走るか？", "thought");
+      break;
+    
+    case 38:
       setText("𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧…", "narration");
       break;
     
