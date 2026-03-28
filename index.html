@@ -362,32 +362,51 @@ function next() {
     case 27:
       chara.style.display = "none";
       front.style.display = "none";
-      setText("いってきま～す", "chara");
+      setText("……", "main");
       break;
 
     case 28:
-      chara.style.display = "none";
-      front.style.display = "none";
-      setText("……行ったか", "thought");
+      setText("いってきま～す", "chara");
       break;
     
     case 29:
-      bg.src = "images/bg_myroom_a.jpg";
-      setText("………", "main");
+      setText("……", "main");
       break;
     
     case 30:
-      bg.src = "images/bg_myroom_a.jpg";
-      setText("やべぇ！", "main");
+      setText("遅刻するわよ～", "narration");
       break;
     
     case 31:
       bg.src = "images/bg_myroom_a.jpg";
-      setText("遅刻だっ！", "main");
+      setText("……はっ！", "main");
       break;
     
     case 32:
-      bg.src = "images/bg_myroom_a.jpg";
+      setText("やべっ！", "main");
+      break;
+    
+    case 33:
+      setText("遅刻だっ！", "main");
+      break;
+    
+    case 34:
+      bg.style.display = "none";
+      chara.style.display = "none";
+      front.style.display = "none";
+      setText("ちょっと、ご飯は～？", "narration");
+      break;
+    
+    case 35:
+      setText("…時間無いから～", "main");
+      break;
+    
+    case 36:
+      setText("いってきます！", "main");
+      break;
+    
+    case 37:
+      bg.src = "images/bg_road_home.jpg";
       setText("𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧…", "narration");
       break;
     
