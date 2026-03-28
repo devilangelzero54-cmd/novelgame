@@ -88,6 +88,12 @@ img {
   color: #aaaaaa;
   font-style: italic;
 }
+
+/* その他 */
+.other {
+  color: #bbbbbb;
+  font-style: italic;
+}
   
   /* UI */
 .ui {
@@ -374,7 +380,7 @@ function next() {
       break;
     
     case 30:
-      setText("遅刻するわよ～？", "narration");
+      setText("遅刻するわよ～？", "other");
       break;
     
     case 31:
@@ -394,7 +400,7 @@ function next() {
       bg.style.display = "none";
       chara.style.display = "none";
       front.style.display = "none";
-      setText("ちょっと、ご飯は～？", "narration");
+      setText("ちょっと、ご飯は～？", "other");
       break;
     
     case 35:
@@ -526,6 +532,7 @@ function setText(content, type) {
   if (type === "main") text.classList.add("main");
   if (type === "narration") text.classList.add("narration");
   if (type === "thought") text.classList.add("thought");
+  if (type === "other") text.classList.add("other");
 }
   
 function showChoices() {
