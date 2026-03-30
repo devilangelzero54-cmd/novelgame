@@ -417,6 +417,7 @@ function next() {
       bg.style.display = "block";
       bg.src = "images/bg_road_home.jpg";
       setText("……走るか？", "thought");
+      step = 201;
       break;
     
     case 38:
@@ -513,6 +514,55 @@ function next() {
       break;
     
     case 70:
+      break;default:
+      text.innerText = "𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧…";
+      break;
+
+    case 201:
+      chara.style.display = "none";
+      front.style.display = "none";
+      bg.style.display = "block";
+      bg.src = "images/bg_road_home.jpg";
+      setText("おっはよ～", "other");
+      break;
+
+    case 202:
+      setText("…ん？", "main");
+      break;
+
+    case 203:
+      chara.src = "images/chara_gyaru_smile.png";
+      break;
+    
+    case 204:
+      setText("…おはよ", "main");
+      break;
+    
+    case 205:
+      setText("…って", "main");
+      break;
+    
+    case 206:
+      setText("はぁ… 随分と余裕だなぁ？", "main");
+      break;
+    
+    case 207:
+      setText("…ん？ なにが？", "chara");
+      break;
+    
+    case 208:
+      setText("…いや、聞いた俺が悪かった……", "main");
+      break;
+    
+    case 209:
+      setText("変なのぉ～♪？", "chara");
+      break;
+    
+    case 210:
+      setText("オ マ エ ガ ナ…", "main");
+      break;
+    
+    case 211:
       break;default:
       text.innerText = "𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧…";
       break;
