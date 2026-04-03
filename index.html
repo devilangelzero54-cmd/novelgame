@@ -599,6 +599,24 @@ function next() {
       break;
     
     case 219:
+      setText("あっ！ 待ってょ～", "chara");
+      break;
+    
+    case 220:
+      chara.style.display = "none";
+      front.style.display = "none";
+      bg.style.display = "block";
+      bg.src = "images/bg_gate.jpg";
+      setText("はぁ… はぁ… 間に合ったか？", "main");
+      break;
+    
+    case 221:
+  chara.style.display = "block";
+  chara.src = "images/chara_discipline_jitome.png";
+  setText("……遅刻ですね", "chara");
+  break;
+    
+    case 222:
       setText("𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧…", "narration");
       break;
   }
