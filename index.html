@@ -56,8 +56,17 @@ img {
   height: 100%;
   object-fit: cover;
 }
-
-/* テキスト */
+  
+/* キャラ名 */
+.namebox {
+  position: absolute;
+  bottom: 140px; /* テキストの上 */
+  left: 20px;
+  color: white;
+  font-weight: bold;
+}
+  
+  /* テキスト */
 .textbox {
   position: absolute;
   bottom: 70px;
@@ -188,6 +197,7 @@ button {
   <img id="chara" class="chara">
   <img id="front" class="front">
 
+  <div id="name" class="namebox"></div>
   <div class="textbox" id="text"></div>
 
   <div id="text" class="thought">
@@ -234,7 +244,7 @@ function next() {
 
     case 1:
       bg.style.display = "none";
-      setText("んっ…", "main");
+      setText("んっ…", "main", "主人公");
       break;
     
     case 2:
@@ -244,7 +254,7 @@ function next() {
     
     case 3:
       bg.style.display = "none";
-      setText("う～ん…", "main");
+      setText("う～ん…", "main", "主人公");
       break;
     
     case 4:
@@ -265,22 +275,22 @@ function next() {
     
     case 7:
       bg.style.display = "none";
-      setText("…", "main");
+      setText("…", "main", "主人公");
       break;
 
     case 8:
       bg.style.display = "none";
-      setText("……", "main");
+      setText("……", "main", "主人公");
       break;
     
     case 9:
       bg.style.display = "none";
-      setText("………", "main");
+      setText("………", "main", "主人公");
       break;
     
     case 10:
       bg.style.display = "none";
-      setText("…………", "main");
+      setText("…………", "main", "主人公");
       break;
     
     case 11:
@@ -290,7 +300,7 @@ function next() {
     
     case 12:
       bg.style.display = "none";
-      setText("………", "main");
+      setText("………", "main", "主人公");
       break;
     
     case 13:
@@ -300,30 +310,30 @@ function next() {
     
     case 14:
       bg.style.display = "none";
-      setText("まだ、寝てるよ…", "chara");
+      setText("まだ、寝てるよ…", "chara", "怜奈");
       break;
     
     case 15:
       bg.style.display = "none";
-      setText("はぁ……", "chara");
+      setText("はぁ……", "chara", "怜奈");
       break;
     
     case 16:
       bg.style.display = "none";
-      setText("そろそろ、起きなよ。", "chara");
+      setText("そろそろ、起きなよ。", "chara", "怜奈");
       break;
     
     case 17:
       bg.style.display = "none";
-      setText("……", "main");
+      setText("……", "main", "主人公");
       break;
     
     case 18:
-      setText("いい加減に…", "chara");
+      setText("いい加減に…", "chara", "怜奈");
       break;
     
     case 19:
-      setText("起きろっ！！", "chara");
+      setText("起きろっ！！", "chara", "怜奈");
       break;
 
     case 20:
@@ -333,19 +343,19 @@ function next() {
       chara.style.display = "block";
       front.src = "images/bg_myroom_blur_strong.png";
       front.style.display = "block";
-      setText("う～～ん もう少しだけ……", "main");
+      setText("う～～ん もう少しだけ……", "main", "主人公");
       break;
 
     case 21:
-      setText("もう、何時だと思ってるの？", "chara");
+      setText("もう、何時だと思ってるの？", "chara", "怜奈");
       break;
     
     case 22:
-      setText("う～ん 何時…？", "main");
+      setText("う～ん 何時…？", "main", "主人公");
       break;
     
     case 23:
-      setText("ご飯食べる時間無くなるよ！", "chara");
+      setText("ご飯食べる時間無くなるよ！", "chara", "怜奈");
       break;
     
     case 24:
@@ -354,61 +364,61 @@ function next() {
       chara.style.display = "block";
       front.src = "images/bg_myroom_blur_weak.png";
       front.style.display = "block";
-      setText("わたし、先に行くからね。", "chara");
+      setText("わたし、先に行くからね。", "chara", "怜奈");
       break;
     
     case 25:
-      setText("遅刻しないでよね", "chara");
+      setText("遅刻しないでよね", "chara", "怜奈");
       break;
     
     case 26:
-      setText("わかったよ…", "main");
+      setText("わかったよ…", "main", "主人公");
       break;
     
     case 27:
       chara.style.display = "none";
       front.style.display = "none";
-      setText("……", "main");
+      setText("……", "main", "主人公");
       break;
 
     case 28:
-      setText("いってきま～す", "chara");
+      setText("いってきま～す", "chara", "怜奈");
       break;
     
     case 29:
-      setText("……", "main");
+      setText("……", "main", "主人公");
       break;
     
     case 30:
-      setText("遅刻するわよ～？", "other");
+      setText("遅刻するわよ～？", "other", "母");
       break;
     
     case 31:
       bg.src = "images/bg_myroom_a.jpg";
-      setText("……はっ！", "main");
+      setText("……はっ！", "main", "主人公");
       break;
     
     case 32:
-      setText("やべっ！", "main");
+      setText("やべっ！", "main", "主人公");
       break;
     
     case 33:
-      setText("遅刻だっ！", "main");
+      setText("遅刻だっ！", "main", "主人公");
       break;
     
     case 34:
       bg.style.display = "none";
       chara.style.display = "none";
       front.style.display = "none";
-      setText("ちょっと、ご飯は～？", "other");
+      setText("ちょっと、ご飯は～？", "other", "母");
       break;
     
     case 35:
-      setText("…時間無いから～", "main");
+      setText("…時間無いから～", "main", "主人公");
       break;
     
     case 36:
-      setText("いってきます！", "main");
+      setText("いってきます！", "main", "主人公");
       break;
     
     case 37:
@@ -427,78 +437,78 @@ function next() {
     case 51:
       bg.style.display = "block";
       bg.src = "images/bg_living.jpg";
-      setText("ふぁ～～……", "main");
+      setText("ふぁ～～……", "main", "主人公");
       break;
 
     case 52:
-      setText("おはよ……", "main");
+      setText("おはよ……", "main", "主人公");
       break;
     
     case 53:
       chara.style.display = "block";
       chara.src = "images/chara_sister_surprise.png";
-      setText("おはよう。", "chara");
+      setText("おはよう。", "chara", "怜奈");
       break;
 
     case 54:
       bg.style.display = "block";
       chara.src = "images/chara_sister_laugh.png";
-      setText("…珍しく、今日は早起きだねw", "chara");
+      setText("…珍しく、今日は早起きだねw", "chara", "怜奈");
       break;
     
     case 55:
-      setText("あぁ…目が覚めちゃったよ。", "main");
+      setText("あぁ…目が覚めちゃったよ。", "main", "主人公");
       break;
 
     case 56:
       chara.src = "images/chara_sister_grin.png";
-      setText("ふぅ～ん♪", "chara");
+      setText("ふぅ～ん♪", "chara", "怜奈");
       break;
 
     case 57:
-      setText("…何か、いい事でもあるのかな？", "chara");
+      setText("…何か、いい事でもあるのかな？", "chara", "怜奈");
       break;
     
     case 58:
-      setText("ナニモナイヨ…", "main");
+      setText("ナニモナイヨ…", "main", "主人公");
       break;
     
     case 59:
-      setText("…なんで？カタコトwww", "chara");
+      setText("…なんで？カタコトwww", "chara", "怜奈");
       break;
     
     case 60:
-      setText("ニヤニヤすんな…", "main");
+      setText("ニヤニヤすんな…", "main", "主人公");
       break;
     
     case 61:
       chara.src = "images/chara_sister_laugh.png";
-      setText("してないよぉ～www", "chara");
+      setText("してないよぉ～www", "chara", "怜奈");
       break;
     
     case 62:
-      setText("くっ…もういい…", "main");
+      setText("くっ…もういい…", "main", "主人公");
       break;
     
     case 63:
-      setText("学校いってくる", "main");
+      setText("学校いってくる", "main", "主人公");
       break;
     
     case 64:
       chara.src = "images/chara_sister_anger.png";
-      setText("あっ！こら、待ちなさい！", "chara");
+      setText("あっ！こら、待ちなさい！", "chara", "怜奈");
       break;
     
     case 65:
-      setText("………", "chara");
+      setText("………", "chara", "怜奈");
       break;
     
     case 66:
-      setText("…久しぶりに", "chara");
+      setText("…久しぶりに", "chara", "怜奈");
       break;
     
     case 67:
-      setText("一緒にいけると思ったのに", "chara");
+      setText("一緒にいけると思ったのに", "chara", "怜奈");
       break;
     
     case 68:
@@ -529,7 +539,7 @@ function next() {
       break;
 
     case 202:
-      setText("…ん？", "main");
+      setText("…ん？", "main", "主人公");
       break;
 
     case 203:
@@ -539,55 +549,55 @@ function next() {
       break;
     
     case 204:
-      setText("…おはよ", "main");
+      setText("…おはよ", "main", "主人公");
       break;
     
     case 205:
-      setText("…って", "main");
+      setText("…って", "main", "主人公");
       break;
     
     case 206:
-      setText("はぁ… 随分と余裕だなぁ？", "main");
+      setText("はぁ… 随分と余裕だなぁ？", "main", "主人公");
       break;
     
     case 207:
-      setText("…ん？ なにが？", "chara");
+      setText("…ん？ なにが？", "chara", "愛梨");
       break;
     
     case 208:
-      setText("…いや、聞いた俺が悪かった……", "main");
+      setText("…いや、聞いた俺が悪かった……", "main", "主人公");
       break;
     
     case 209:
-      setText("変なのぉ～♪", "chara");
+      setText("変なのぉ～♪", "chara", "愛梨");
       break;
     
     case 210:
-      setText("オ マ エ ガ ナ…", "main");
+      setText("オ マ エ ガ ナ…", "main", "主人公");
       break;
     
     case 211:
-      setText("女の子に、オマエとか言う？", "chara");
+      setText("女の子に、オマエとか言う？", "chara", "愛梨");
       break;
     
     case 212:
-      setText("はい はい じゃあな", "main");
+      setText("はい はい じゃあな", "main", "主人公");
       break;
     
     case 213:
-      setText("じゃあなって…", "chara");
+      setText("じゃあなって…", "chara", "愛梨");
       break;
     
     case 214:
-      setText("行先は同じなんだから一緒にね♪", "chara");
+      setText("行先は同じなんだから一緒にね♪", "chara", "愛梨");
       break;
     
     case 215:
-      setText("えぇ～", "main");
+      setText("えぇ～", "main", "主人公");
       break;
     
     case 216:
-      setText("えぇ～じゃない！ほら行こ♪", "chara");
+      setText("えぇ～じゃない！ほら行こ♪", "chara", "愛梨");
       break;
     
     case 217:
@@ -595,11 +605,11 @@ function next() {
       break;
     
     case 218:
-      setText("はぁっ…急ぐぞ…", "main");
+      setText("はぁっ…急ぐぞ…", "main", "主人公");
       break;
     
     case 219:
-      setText("あっ！ 待ってょ～", "chara");
+      setText("あっ！ 待ってょ～", "chara", "愛梨");
       break;
     
     case 220:
@@ -607,19 +617,19 @@ function next() {
       front.style.display = "none";
       bg.style.display = "block";
       bg.src = "images/bg_gate.jpg";
-      setText("はぁ… はぁ… 間に合ったか？", "main");
+      setText("はぁ… はぁ… 間に合ったか？", "main", "主人公");
       break;
     
     case 221:
       chara.style.display = "block";
       chara.src = "images/chara_discipline_jitome.png";
-      setText("……遅刻ですね", "chara");
+      setText("……遅刻ですね", "chara", "凛");
       break;
     
     case 222:
       chara.style.display = "block";
       chara.src = "images/chara_gyaru_smile.png";
-      setText("リンリン 見逃してょ～♪", "chara");
+      setText("リンリン 見逃してょ～♪", "chara", "愛梨");
       break;
     
     case 223:
@@ -629,23 +639,23 @@ function next() {
     case 224:
       chara.style.display = "block";
       chara.src = "images/chara_discipline_jitome.png";
-      setText("……その呼び方はやめて", "chara");
+      setText("……その呼び方はやめて", "chara", "凛");
       break;
     
     case 225:
       chara.style.display = "block";
       chara.src = "images/chara_gyaru_smile.png";
-      setText("相変わらず硬いねぇ～♪", "chara");
+      setText("相変わらず硬いねぇ～♪", "chara", "愛梨");
       break;
     
     case 226:
-      setText("ぶっ…w", "main");
+      setText("ぶっ…w", "main", "主人公");
       break;
     
     case 227:
       chara.style.display = "block";
       chara.src = "images/chara_discipline_jitome.png";
-      setText("……今、笑いましたか？", "chara");
+      setText("……今、笑いましたか？", "chara", "凛");
       break;
     
     case 228:
@@ -656,13 +666,20 @@ function next() {
   step++;
 }
 
-function setText(content, type) {
-  const text = document.getElementById("text"); // ←追加
+function setText(content, type, name = "") {
+  const text = document.getElementById("text");
+  const nameBox = document.getElementById("name"); // ←追加
 
+  // 名前表示
+  nameBox.innerText = name;
+
+  // テキスト
   text.innerText = content;
 
-  text.className = "textbox"; // ←ここも修正（重要）
+  // クラス初期化
+  text.className = "textbox";
 
+  // タイプ別クラス
   if (type === "chara") text.classList.add("charaTalk");
   if (type === "main") text.classList.add("main");
   if (type === "narration") text.classList.add("narration");
