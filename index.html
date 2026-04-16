@@ -670,40 +670,64 @@ function next() {
       break;
     
     case 229:
-      setText("まぁ 良いです", "chara", "凛");
+      setText("……まぁ いいです", "chara", "凛");
       break;
     
     case 230:
-      setText("2人とも 生徒手帳を出してください。", "chara", "凛");
+      setText("2人とも クラスと名前を", "chara", "凛");
       break;
     
     case 231:
-      setText("どうぞ……", "main", "主人公");
+      chara.style.display = "block";
+      chara.src = "images/chara_gyaru_smile.png";
+      setText("同じクラスじゃ～ん♪", "chara", "愛梨");
       break;
     
     case 232:
-      chara.style.display = "block";
-      chara.src = "images/chara_gyaru_smile.png";
-      setText("仕方ないかぁ～♪", "chara", "愛梨");
+      setText("右に同じ", "main", "主人公");
       break;
     
     case 233:
-      setText("りんりん またね～♪", "chara", "愛梨");
+      chara.style.display = "block";
+      chara.src = "images/chara_discipline_jitome.png";
+      setText("……いいから", "chara", "凛");
       break;
     
     case 234:
       chara.style.display = "block";
-      chara.src = "images/chara_discipline_jitome.png";
-      setText("だから！……その呼び方はやめて！", "chara", "凛");
+      chara.src = "images/chara_gyaru_smile.png";
+      setText("真面目だねぇ～♪", "chara", "愛梨");
       break;
     
     case 235:
       chara.style.display = "block";
-      chara.src = "images/chara_gyaru_smile.png";
-      setText("あははははっ♪", "chara", "愛梨");
+      chara.src = "images/chara_discipline_jitome.png";
+      setText("……もういいです", "chara", "凛");
       break;
     
     case 236:
+      setText("授業が始まるので、行きなさい", "chara", "凛");
+      break;
+    
+    case 237:
+      chara.style.display = "block";
+      chara.src = "images/chara_discipline_jitome.png";
+      setText("りんりん、またねぇ～♪", "chara", "愛梨");
+      break;
+    
+    case 238:
+      chara.style.display = "block";
+      chara.src = "images/chara_discipline_jitome.png";
+      setText("だから……その呼び方はやめて！", "chara", "凛");
+      break;
+    
+    case 239:
+      chara.style.display = "block";
+      chara.src = "images/chara_gyaru_smile.png";
+      setText("あはははっ♪", "chara", "愛梨");
+      break;
+    
+    case 240:
       chara.style.display = "none";
       front.style.display = "none";
       bg.style.display = "block";
@@ -711,7 +735,7 @@ function next() {
       setText("はぁ～っ…", "main", "主人公");
       break;
     
-    case 237:
+    case 241:
       setText("𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧…", "narration");
       break;
   }
